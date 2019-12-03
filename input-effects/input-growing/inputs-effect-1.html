@@ -66,13 +66,13 @@
         top: 7px;
       }
       .input-container:hover .input {
-        width: 200px;
+        width: 300px;
       }
       .input:focus {
-        width: 200px;
+        width: 300px;
       }
       .lenght {
-        width: 200px;
+        width: 300px;
       }
     </style>
   </head>
@@ -97,15 +97,16 @@
     <script>
       let inputs = document.getElementsByClassName("input");
       console.log(inputs);
-      function addClass() {
+
+      inputs.addEventListener("blur", function addClass() {
         console.log("test iside funct");
         for (i = 0; i < inputs.length; i++) {
           if (inputs[i] !== "") {
+            console.log(inputs[i]);
             inputs[i].classList.add("lenght");
           }
         }
-      }
-      inputs.addEventListener("blur", addClass);
+      });
     </script>
   </body>
 </html>
