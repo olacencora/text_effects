@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>form - herley davidson katowice</title>
+    <title>form</title>
     <link
       href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap&subset=latin-ext"
       rel="stylesheet"
@@ -20,10 +20,24 @@
         background-color: rgb(132, 175, 211);
         width: 800px;
         height: 600px;
+        position: relative;
+        margin: 10vh auto;
+        border-radius: 10px;
+      }
+
+      .title {
+        font-size: 25px;
+        margin-bottom: 40px;
+      }
+      .inputs-box {
+        position: absolute;
+        left: 30%;
+        width: 50%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
       }
       .input-container {
         margin: 20px;
@@ -33,20 +47,22 @@
         height: 40px;
         width: 40px;
         border: none;
+        padding-left: 30px;
         transition: width 0.5s ease-in-out;
         font-family: "Inconsolata", monospace;
+        font-size: 20px;
       }
       .input-box {
         position: absolute;
         height: 26px;
-        width: 50px;
+        width: 80px;
         background-color: rgb(58, 98, 145);
         font-size: 15px;
         color: #fff;
         z-index: 2;
         text-align: center;
         line-height: 26px;
-        left: -30px;
+        left: -60px;
         top: 7px;
       }
       .input-container:hover .input {
@@ -62,17 +78,20 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="input-container">
-        <div class="input-box">name</div>
-        <input type="text" class="input" />
-      </div>
-      <div class="input-container">
-        <div class="input-box">email</div>
-        <input type="text" class="input" />
-      </div>
-      <div class="input-container">
-        <div class="input-box">phone</div>
-        <input type="text" class="input" />
+      <div class="inputs-box">
+        <h3 class="title">go and hover this imputs</h3>
+        <div class="input-container">
+          <div class="input-box">name</div>
+          <input type="text" class="input" />
+        </div>
+        <div class="input-container">
+          <div class="input-box">email</div>
+          <input type="text" class="input" />
+        </div>
+        <div class="input-container">
+          <div class="input-box">phone</div>
+          <input type="text" class="input" />
+        </div>
       </div>
     </div>
     <script>
