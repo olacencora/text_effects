@@ -1,0 +1,37 @@
+body {
+  font-family: "Anton", sans-serif;
+  font-size: 2em;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.intro {
+  display: flex;
+  /* default row */
+  color: #fff;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../img/bryan-garces-zwo-0E7l1ZI-unsplash.jpg");
+  background-size: cover;
+  padding: 30px;
+}
+.typing {
+  position: relative;
+  margin-left: 10px;
+}
+.typing::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 10%;
+  border-right: 6px solid #fff;
+  animation: blink 0.7s infinite ease;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
