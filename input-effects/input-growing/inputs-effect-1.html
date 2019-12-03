@@ -96,17 +96,25 @@
     </div>
     <script>
       let inputs = document.getElementsByClassName("input");
-      console.log(inputs);
-
-      inputs.addEventListener("blur", function addClass() {
-        console.log("test iside funct");
-        for (i = 0; i < inputs.length; i++) {
-          if (inputs[i] !== "") {
-            console.log(inputs[i]);
-            inputs[i].classList.add("lenght");
-          }
+      function addClass() {
+        if (inputs[i] !== "") {
+          console.log(inputs[i]);
+          inputs[i].classList.add("lenght");
         }
-      });
+      }
+      for (i = 0; i < inputs.length; i++) {
+        inouts[i].addEventListener("blur", addClass);
+      }
+
+      // inputs.addEventListener("focus", function addClass() {
+      //   console.log("test iside funct");
+      //   for (i = 0; i < inputs.length; i++) {
+      //     if (inputs[i] !== "") {
+      //       console.log(inputs[i]);
+      //       inputs[i].classList.add("lenght");
+      //     }
+      //   }
+      // });
     </script>
   </body>
 </html>
