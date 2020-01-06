@@ -26,13 +26,13 @@
       min-width: 280px;
       background-color: #fff;
       font-family: "Varela", sans-serif;
+      padding: 5% 20% 30px 10%;
     }
-    .main-section {
+    .text-section {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      padding: 10% 20% 30px 10%;
     }
     .text-before-title {
       color: #000;
@@ -40,7 +40,7 @@
 
     .title {
       font-family: "Bowlby One SC", cursive;
-      background: url(https://images.unsplash.com/photo-1499088513455-78ed88b7a5b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=971&q=80);
+      background: url(https://images.unsplash.com/photo-1498462440456-0dba182e775b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
       font-size: 180px;
       background-repeat: no-repeat;
       background-size: cover;
@@ -52,10 +52,50 @@
     .text-after-tiitle {
       color: #000;
     }
+
+    /* box  */
+
+    .box-section {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+    }
+
+    .front {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px;
+    }
+
+    .box {
+      margin: 20px 20px 0 0;
+      height: 250px;
+      width: 250px;
+      background-color: #fff;
+      background-image: url(https://images.unsplash.com/photo-1522046310824-b844b4b5806f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+      opacity: 0.7;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+    }
+
+    .box-title {
+      font-size: 26px;
+      color: #fff;
+    }
+
+    .box-text {
+      font-size: 15px;
+      color: #fff;
+    }
   </style>
   <body>
     <div class="wrapper">
-      <section class="main-section">
+      <section class="text-section">
         <h2 class="text-before-title">Taking Care of Your Skin</h2>
         <div class="container-title">
           <h1 class="title">skin care</h1>
@@ -68,6 +108,17 @@
           your skin is simple and easy, and the resulting healthy, glowing
           complexion is worth the effort!
         </h3>
+      </section>
+      <section class="box-section">
+        <div class="box">
+          <div class="front">
+            <h4 class="box-title">dry skin</h4>
+            <p class="box-text">
+              is used to describe a skin type that produces less sebum than
+              normal skin
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   </body>
