@@ -68,12 +68,6 @@
       flex-direction: column;
       justify-content: flex-end;
       padding: 10px;
-    }
-
-    .box {
-      margin: 20px 20px 0 0;
-      height: 250px;
-      width: 250px;
       background-color: #fff;
       background-image: url(https://images.unsplash.com/photo-1522046310824-b844b4b5806f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
       opacity: 0.7;
@@ -81,15 +75,44 @@
       background-size: cover;
       background-position: center;
       border-radius: 15px;
+      backface-visibility: hidden;
     }
 
-    .box-title {
-      font-size: 26px;
+    .box {
+      margin: 20px 20px 0 0;
+      height: 250px;
+      width: 250px;
+      position: relative;
+    }
+
+    .box-title-front {
+      font-size: 40px;
       color: #fff;
     }
 
     .box-text {
       font-size: 15px;
+      color: #fff;
+    }
+
+    .back {
+      position: absolute;
+      border-radius: 15px;
+      background-color: rgb(18, 19, 105);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+    }
+
+    .box-title-back {
+      font-size: 26px;
       color: #fff;
     }
   </style>
@@ -112,11 +135,20 @@
       <section class="box-section">
         <div class="box">
           <div class="front">
-            <h4 class="box-title">dry skin</h4>
-            <p class="box-text">
-              is used to describe a skin type that produces less sebum than
-              normal skin
-            </p>
+            <div class="content-front">
+              <h4 class="box-title-front">dry skin</h4>
+            </div>
+          </div>
+          <div class="back">
+            <div class="content-back">
+              <h4 class="box-title-back">dry skin</h4>
+              <p class="box-text">
+                is used to describe a skin type that produces less sebum than
+                normal skin. If your skin is looking dull or dry, you might not
+                be getting enough of vitamins or water; you might also be
+                sleeping on the wrong type of pillowcase!
+              </p>
+            </div>
           </div>
         </div>
       </section>
